@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 222 47% 31%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 31%;
+
+    --radius: 0.75rem;
+    
+    --sidebar-width: 16rem;
+    --sidebar-width-collapsed: 5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 20% 98%;
+  
+    --card: 222 47% 13%;
+    --card-foreground: 210 20% 98%;
+  
+    --popover: 222 47% 13%;
+    --popover-foreground: 210 20% 98%;
+  
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 47% 11%;
+  
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 210 20% 98%;
+  
+    --muted: 222 47% 18%;
+    --muted-foreground: 215 20.2% 75.1%;
+  
+    --accent: 262 83% 68%;
+    --accent-foreground: 210 20% 98%;
+  
+    --destructive: 0 84.2% 65.2%;
+    --destructive-foreground: 210 20% 98%;
+  
+    --border: 222 47% 25%;
+    --input: 222 47% 25%;
+    --ring: 224 76.3% 65%;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    @apply h-full;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  .glass-panel {
+    @apply bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border border-white/80 dark:border-slate-700/80 rounded-xl shadow-sm;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 dark:bg-slate-800/80 backdrop-blur-md border border-white/50 dark:border-slate-700/60 rounded-xl shadow-sm transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply bg-white/80 dark:bg-slate-800/90 shadow-md translate-y-[-2px];
+  }
+
+  .subtle-ring-focus {
+    @apply focus:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-0;
+  }
+  
+  .page-transition-enter {
+    @apply opacity-0;
+  }
+  
+  .page-transition-enter-active {
+    @apply opacity-100 transition-opacity duration-300 ease-out;
+  }
+  
+  .page-transition-exit {
+    @apply opacity-100;
+  }
+  
+  .page-transition-exit-active {
+    @apply opacity-0 transition-opacity duration-300 ease-in;
+  }
+
+  /* Dark mode improvements */
+  .dark .bg-white\/80 {
+    @apply bg-slate-900/90;
+  }
+  
+  .dark .bg-white\/70 {
+    @apply bg-slate-900/80;
+  }
+  
+  .dark .bg-white\/90 {
+    @apply bg-slate-900/95;
+  }
+  
+  .dark .bg-secondary\/30 {
+    @apply bg-slate-800/50;
+  }
+  
+  .dark .bg-secondary\/80 {
+    @apply bg-slate-800/90;
+  }
+  
+  .dark .border-border\/50 {
+    @apply border-slate-700/60;
+  }
+  
+  .dark .border-border\/40 {
+    @apply border-slate-700/50;
+  }
+  
+  .dark .bg-muted\/10 {
+    @apply bg-slate-800/40;
+  }
+  
+  .dark .text-muted-foreground {
+    @apply text-slate-300/80;
+  }
+
+  /* Additional dark mode contrast improvements */
+  .dark select {
+    @apply bg-slate-800 border-slate-700 text-slate-200;
+  }
+  
+  .dark input::placeholder {
+    @apply text-slate-500;
+  }
+  
+  .dark .bg-muted\/20 {
+    @apply bg-slate-800/60 text-slate-200;
+  }
+  
+  .dark .card {
+    @apply border-slate-700;
+  }
+  
+  .dark .badge-success {
+    @apply bg-green-600 hover:bg-green-700;
+  }
+}
