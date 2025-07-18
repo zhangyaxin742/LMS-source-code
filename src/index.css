@@ -7,68 +7,73 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 224 71.4% 4.1%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 222 47% 31%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 355 7% 97%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 24 70% 56%;
+    --accent-foreground: 60 9.1% 97.8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 222 47% 31%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346 77% 49%;
 
     --radius: 0.75rem;
     
     --sidebar-width: 16rem;
     --sidebar-width-collapsed: 5rem;
+    
+    /* Project 57 brand gradients */
+    --gradient-primary: linear-gradient(135deg, #EC4899 0%, #F97316 100%);
+    --gradient-secondary: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 20% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
   
-    --card: 222 47% 13%;
-    --card-foreground: 210 20% 98%;
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
   
-    --popover: 222 47% 13%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
   
-    --primary: 217 91% 65%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 355 7% 97%;
   
-    --secondary: 222 47% 18%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
   
-    --muted: 222 47% 18%;
-    --muted-foreground: 215 20.2% 75.1%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
   
-    --accent: 262 83% 68%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 24 70% 56%;
+    --accent-foreground: 60 9.1% 97.8%;
   
-    --destructive: 0 84.2% 65.2%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
   
-    --border: 222 47% 25%;
-    --input: 222 47% 25%;
-    --ring: 224 76.3% 65%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346 77% 49%;
   }
 
   * {

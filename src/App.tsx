@@ -62,12 +62,12 @@ function App() {
             <Toaster />
             <Sonner />
             <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/" element={<Navigate to="/login" replace />} />
+              <Route path="/auth" element={<Login />} />
+              <Route path="/" element={<Navigate to="/auth" replace />} />
               
               <Route path="/dashboard" element={
-                <ProtectedRoute allowedRoles={["tutor", "admin"]}>
-                  <Layout><Dashboard /></Layout>
+                <ProtectedRoute allowedRoles={["student", "admin"]}>
+                  <Dashboard />
                 </ProtectedRoute>
               } />
               <Route path="/assignments" element={
